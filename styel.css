@@ -1,0 +1,114 @@
+@font-face {
+  font-family: old;
+  src: url(extra_old/ExtraOld_PERSONAL_USE_ONLY.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+/* nav sec */
+header {
+  background: rgb(11, 36, 11);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: old;
+}
+header .logo h1 {
+  font-size: 40px;
+  padding: 10px 20px;
+  color: white;
+}
+header .logo h1 span {
+  color: aquamarine;
+}
+header .navbar ul {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+header .navbar ul li {
+  padding: 10px;
+  margin: 3px;
+}
+header .navbar ul li a {
+  padding: 20px 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+header .navbar ul li a:hover {
+  color: aquamarine;
+}
+header .navbar ul li a:active {
+  color: aqua;
+}
+header input {
+  display: none;
+}
+header label {
+  display: none;
+}
+#burger-div {
+  position: absolute;
+  /* margin-right: 0; */
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  right: 10vw;
+  z-index: 2000;
+}
+#burger-div span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background-color: aquamarine;
+  border-radius: 9px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  header label {
+    display: block;
+  }
+  header .navbar {
+  height: 50vh;
+  width: 40vw;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  background: rgb(12, 33, 12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .navbar ul {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#toggle:checked ~ header .navbar {
+  top: 0;
+}
+}
+/* end nav sec */
