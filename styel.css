@@ -19,14 +19,19 @@ header {
   font-family: old;
 }
 header .logo h1 {
-  font-size: 40px;
+  font-size: 30px;
   padding: 10px 20px;
   color: white;
 }
 header .logo h1 span {
   color: aquamarine;
 }
-header .navbar ul {
+header .navbar{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+header .navbar ul{
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -40,6 +45,7 @@ header .navbar ul li a {
   font-size: 20px;
   font-weight: bold;
   color: rgb(255, 255, 255);
+  transition: all 0.5s ease;
 }
 header .navbar ul li a:hover {
   color: aquamarine;
@@ -47,68 +53,70 @@ header .navbar ul li a:hover {
 header .navbar ul li a:active {
   color: aqua;
 }
-header input {
-  display: none;
-}
-header label {
-  display: none;
-}
-#burger-div {
-  position: absolute;
-  /* margin-right: 0; */
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+.toggle{
+  height: 34px;
+  width: 44px;
+  background: white;
+  border-radius: 5px;
   cursor: pointer;
-  right: 10vw;
-  z-index: 2000;
+  margin: 15px;
+  border: none;
+  display: none;
 }
-#burger-div span {
+.toggle:focus{
+  outline: none;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.684);
+}
+.toggle span{
+  height: 2px;
+  width: 25px;
+  background: rgb(11, 36, 11);
   display: block;
+  margin: auto;
+  position: relative;
+}
+.toggle span::before,
+.toggle span::after{
+  content: '';
   position: absolute;
-  height: 5px;
+  left: 0; top: 0;
   width: 100%;
-  background-color: aquamarine;
-  border-radius: 9px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.5s ease-in-out;
+  height: 100%;
+  background: rgb(11, 36, 11);
+}
+.toggle span::before{
+  transform: translateY(-6px);
+}
+.toggle span::after{
+  transform: translateY(6px);
 }
 
-@media (max-width: 900px) {
-  header label {
+@media(max-width:990px){
+  .toggle{
     display: block;
   }
-  header .navbar {
-  height: 50vh;
-  width: 40vw;
+  header .navbar.open{
+    visibility: visible;
+  }
+  header .navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 100vw;
   position: fixed;
-  top: 0;
-  right: 100%;
-  background: rgb(12, 33, 12);
-  display: flex;
-  align-items: center;
+  top: 63px; left: 0;
+  background: rgb(11, 36, 11);
+  visibility: hidden;
+  transition: all .6s ease;
+  }
+  header .navbar ul{
+    height: 40vh;
+    display: flex;
   justify-content: center;
-}
-header .navbar ul {
-  height: 50vh;
-  display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-}
-#toggle:checked ~ header .navbar {
-  top: 0;
-}
+  
+  }
 }
 /* end nav sec */
