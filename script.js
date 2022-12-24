@@ -58,7 +58,7 @@ window.onmousedown = e => {
 }
 
 window.onmouseup = () => {
-    track.dataset.mouseDownAt="0";
+    track.dataset.mouseDownAt = "0";
     track.dataset.prevPercentage=track.dataset.percentage;
 }
 
@@ -71,8 +71,15 @@ window.onmousemove = e => {
     const percentage = (mouseDelta / maxDelta) * -100,
           nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;       
 
+    Math.min(nextPercentage, 0);
+    Math.max(nextPercentage, -100);
+
     track.dataset.percentage = nextPercentage;
 
-    track.style.transform = `translate(${nextPercentage}%, -50%)`
+    track.style.transform = `translate(${nextPercentage}%, -50%)`;
+
+    for(const image of track.getElementsByClassName("image")) {
+        image.style.objectPosition = `${nextPercentage + 100} 50%`;
+    }
 }
 // end carmel img hover animation
