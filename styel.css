@@ -130,3 +130,190 @@
   }
 }
 /* end nav sec */
+
+/* card games */
+.card-body{
+  background: #222;
+  height: 90vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.card-groups,
+.card-group,
+.card{
+  aspect-ratio: 5 / 7;
+}
+
+.card-groups,
+.card-group,
+.big-card{
+  width: 30vmin;
+}
+
+.card-group{
+  position: absolute;
+  transition: all 400ms ease;
+}
+
+.card{
+  aspect-ratio: 5 / 7;
+  background: rgba(255, 255, 255, 0.293);
+  position: absolute;
+  cursor: pointer;
+  transition: all 800ms;
+  transition-timing-function: cubic-bezier(.05,.43,.25.95);
+}
+.big-card{
+  width: 30vmin;
+  border-radius: 10px;
+}
+.little-cards{
+  width: 12vmin;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-group[data-status="unknown"]{
+  transform: scale(0);
+}
+.card-group[data-status="active"]{
+  transition-delay: 300ms;
+}
+.card-group[data-status="after"]{
+  transform: translateX(80%) scale(0) rotate(20deg);
+}
+.card-group[data-status="becoming-active-from-before"]{
+  transform: translateX(-80%) scale(0) rotate(-20deg);
+  transition: none;
+}
+.card-group[data-status="before"]{
+  transform: translateX(-80%) scale(0) rotate(-20deg);
+}
+.card-group[data-status="becoming-active-from-after"]{
+  transform: translateX(80%) scale(0) rotate(20deg);
+  transition: none;
+}
+.little-cards:nth-child(1){
+  background-image: url(card_images/cat-glasses-space-abstract-wallpaper-preview.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.little-cards:nth-child(3){
+  background-image: url(card_images/download.jfif);
+  background-position: center;
+  background-size: cover;
+}
+.little-cards:nth-child(5){
+  background-image: url(card_images/pexels-photo-617278.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.little-cards:nth-child(7){
+  background-image: url(card_images/unnamed.png);
+  background-position: center;
+  background-size: cover;
+}
+.big-card:nth-child(2){
+  background-image: url(card_images/255883.webp);
+  background-position: center;
+  background-size: cover;
+  transform: translateX(-10%) rotate(-2deg);
+}
+.big-card:nth-child(4){
+  background-image: url(card_images/5636721.webp);
+  background-position: center;
+  background-size: cover;
+  transform: rotate(4deg);
+}
+.big-card:nth-child(6){
+  background-image: url(card_images/car-neon-chevrolet-corvette-race-cars-hd-wallpaper-preview.jpg);
+  background-position: center;
+  background-size: cover;
+  transform: translateX(-6%) rotate(-4deg);
+}
+.big-card:nth-child(8){
+  background-image: url(card_images/cat-4k-hd-wallpaper-preview.jpg);
+  background-position: center;
+  background-size: cover;
+  transform: translateX(10%) rotate(6deg);
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(6){
+  background-image: url(card_images/car-neon-chevrolet-corvette-race-cars-hd-wallpaper-preview.jpg);
+}
+.card-group[data-index="1"] > .big-card:nth-child(8){
+  background-image: url(card_images/unnamed.png);
+}
+
+       /* big-card hover animation */
+.card-group:hover > .big-card:nth-child(2){
+  transform: translate(-70%, 12%) rotate(-20deg);
+}
+.card-group:hover > .big-card:nth-child(4){
+  transform: translate(-40%, 6%) rotate(-7deg);
+}
+.card-group:hover > .big-card:nth-child(6){
+  transform: translate(10%, 4%) rotate(7deg);
+}
+.card-group:hover > .big-card:nth-child(8){
+  transform: translate(70%, 14%) rotate(17deg);
+}
+       /* little-card hover animation */
+.card-group:hover > .little-cards:nth-child(1){
+  transform: translate(260%, -160%) rotate(16deg);
+}
+.card-group:hover > .little-cards:nth-child(3){
+  transform: translate(260%, 160%) rotate(-16deg);
+}
+.card-group:hover > .little-cards:nth-child(5){
+  transform: translate(-300%, -150%) rotate(-18deg);
+}
+.card-group:hover > .little-cards:nth-child(7){
+  transform: translate(-350%, 160%) rotate(12deg);
+}
+      /* buttons */
+.card-swiper-buttons{
+  margin-top: 8vmin;
+  display: flex;
+  justify-content: space-around;
+  padding: 0vmin 1vmin;
+}
+.card-swiper-buttons button{
+  padding: 25px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 2px solid wheat;
+  color: #fff;
+  background: transparent;
+  height: 7vmin;
+  width: 7vmin;
+  cursor: pointer;
+}
+
+/* end card games */
+
+/* carmel img hover animation */
+.carmel-body{
+  height: 100vh;
+  width: 100%;
+  background: #092431;
+  overflow: hidden;
+  position: relative;
+}
+#img-track{
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+#img-track .image{
+  height: 360px;
+  width: 220px;
+  object-fit: cover;
+}
+/* end carmel img hover animation */

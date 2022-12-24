@@ -6,35 +6,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styel.css">
+    <script src="https://kit.fontawesome.com/2deeca8d0e.js" crossorigin="anonymous"></script>
     <title>Cool Stuff</title>
 </head>
 
 <body>
     <!-- nav sec -->
-        <div class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="logo">
-                        <a href="#">Abdirino</a>
-                    </div>
-
-                    <button type="button" class="nav-toggler">
-                        <span></span>
-                    </button>
-
-                    <nav class="nav">
-                        <ul>
-                            <li><a href="#" class="active">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <a href="#">Abdirino</a>
                 </div>
+
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
+    </div>
     <!-- end nav sec -->
+
+    <!-- game cards -->
+    <div class="card-body">
+        <div class="card-swiper">
+            <div class="card-groups">
+                <div class="card-group" data-index="0" data-status="active">
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                </div>
+                <div class="card-group" data-index="1" data-status="unknown">
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                </div>
+                <div class="card-group" data-index="2" data-status="unknown">
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                    <div class="little-cards card"></div>
+                    <div class="big-card card"></div>
+                </div>
+            </div>
+            <div class="card-swiper-buttons">
+                <button id="hate-btn" onclick="handleHateClick()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button id="love" onclick="handleLoveClick()">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- end game cards -->
+
+    <!-- carmel img hover animation -->
+    <div class="carmel-body">
+        <div id="img-track" data-mouse-down-at="0" data-prev-%="0">
+            <img draggable="false" src="carmel_images/6b934435219f90f29e7456750a9537a4469bde7ar1-2048-1452v2_hq.jpg" class="image" alt="">
+            <img draggable="false" src="carmel_images/7538.jpg" class="image" alt="">
+            <img draggable="false" src="carmel_images/a145c99908703da50e654f93d2268ee5.jpg" class="image" alt="">
+            <img draggable="false" src="carmel_images/art-friendship-trust-baby-children-s-hd-wallpaper-preview.jpg" class="image" alt="">
+            <img draggable="false" src="carmel_images/california-cars-city-crosswalk.jpg" class="image" alt="">
+            <img draggable="false" src="carmel_images/desktop-wallpaper-large-random-dump-of-simple-nature.jpg" class="image" alt="">
+            <img draggable="false" src="carmel_images/eB7HKsk.jpg" class="image" alt="">
+        </div>
+    </div>
+    <!-- end carmel img hover animation -->
 
 
 
