@@ -1,3 +1,26 @@
+// MEMOIZATION IN JAVASCRIPT
+let memoizedValue = {};
+
+function multiBy5 (num){
+    if(num in memoizedValue){
+        console.log(memoizedValue[num]);
+    }else{
+        memoizedValue[num] = num * 5;
+        console.log(memoizedValue[num]);
+    }
+}
+
+multiBy5(7);
+multiBy5(7);
+multiBy5(7);
+multiBy5(7);
+multiBy5(7);
+multiBy5(7);
+multiBy5(7);
+multiBy5(7);
+multiBy5(7);
+
+
 // nav sec
 const navToggler = document.querySelector(".nav-toggler");
 
