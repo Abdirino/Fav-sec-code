@@ -12,36 +12,36 @@
   font-family: old;
 }
 /* nav sec */
-.header{
+.header {
   background: #236789;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.844);
   padding: 15px 0;
   line-height: 1.5;
 }
-.header .container{
+.header .container {
   max-width: 1170px;
   margin: auto;
 }
-.header .container .row{
+.header .container .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 .header .container .row .logo,
-.header .container .row .nav{
+.header .container .row .nav {
   padding: 0 15px;
 }
-.header .container .row .logo a{
+.header .container .row .logo a {
   font-size: 30px;
   color: #06ea11;
   text-transform: capitalize;
 }
-.header .container .row .nav ul li{
+.header .container .row .nav ul li {
   display: inline-block;
   margin-left: 40px;
 }
-.header .container .row .nav ul li a{
+.header .container .row .nav ul li a {
   display: block;
   font-size: 18px;
   text-transform: capitalize;
@@ -49,11 +49,11 @@
   padding: 6px 0;
   transition: all 0.5s ease;
 }
-.header .container .row .nav ul li a:hover{
+.header .container .row .nav ul li a:hover {
   color: aqua;
 }
 
-.nav-toggler{
+.nav-toggler {
   height: 34px;
   width: 44px;
   background: wheat;
@@ -63,11 +63,11 @@
   display: none;
   margin-right: 15px;
 }
-.nav-toggler:focus{
+.nav-toggler:focus {
   outline: none;
   box-shadow: 0 0 15px #06ea11;
 }
-.nav-toggler span{
+.nav-toggler span {
   height: 2px;
   width: 24px;
   background: #236789;
@@ -76,12 +76,12 @@
   position: relative;
   transition: all 0.3s ease;
 }
-.nav-toggler.active span{
+.nav-toggler.active span {
   background: transparent;
 }
 .nav-toggler span::before,
-.nav-toggler span::after{
-  content: '';
+.nav-toggler span::after {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -90,24 +90,24 @@
   background: #236789;
   transition: all 0.3s ease;
 }
-.nav-toggler span::before{
+.nav-toggler span::before {
   transform: translateY(-6px);
 }
-.nav-toggler.active span::before{
+.nav-toggler.active span::before {
   transform: rotate(45deg);
 }
-.nav-toggler span::after{
+.nav-toggler span::after {
   transform: translateY(6px);
 }
-.nav-toggler.active span::after{
+.nav-toggler.active span::after {
   transform: rotate(135deg);
 }
 
-@media(max-width:991px){
-  .nav-toggler{
+@media (max-width: 991px) {
+  .nav-toggler {
     display: block;
   }
-  .header .container .row .nav{
+  .header .container .row .nav {
     width: 100%;
     padding: 0;
     max-height: 0;
@@ -115,24 +115,23 @@
     visibility: hidden;
     transition: all 0.5s ease;
   }
-  .header .container .row .nav.open{
+  .header .container .row .nav.open {
     visibility: visible;
   }
-  .header .container .row .nav ul{
+  .header .container .row .nav ul {
     padding: 12px 15px;
     border-top: 2px solid #06ea11;
     margin-top: 12px;
   }
-  .header .container .row .nav ul li{
+  .header .container .row .nav ul li {
     display: block;
     margin: 0;
-
   }
 }
 /* end nav sec */
 
 /* card games */
-.card-body{
+.card-body {
   background: #222;
   height: 90vh;
   width: 100%;
@@ -142,146 +141,146 @@
 
 .card-groups,
 .card-group,
-.card{
+.card {
   aspect-ratio: 5 / 7;
 }
 
 .card-groups,
 .card-group,
-.big-card{
+.big-card {
   width: 30vmin;
 }
 
-.card-group{
+.card-group {
   position: absolute;
   transition: all 400ms ease;
 }
 
-.card{
+.card {
   aspect-ratio: 5 / 7;
   background: rgba(255, 255, 255, 0.293);
   position: absolute;
   cursor: pointer;
   transition: all 800ms;
-  transition-timing-function: cubic-bezier(.05,.43,.25.95);
+  transition-timing-function: cubic-bezier(0.05, 0.43, 0.25.95);
 }
-.big-card{
+.big-card {
   width: 30vmin;
   border-radius: 10px;
 }
-.little-cards{
+.little-cards {
   width: 12vmin;
   border-radius: 10px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.card-group[data-status="unknown"]{
+.card-group[data-status="unknown"] {
   transform: scale(0);
 }
-.card-group[data-status="active"]{
+.card-group[data-status="active"] {
   transition-delay: 300ms;
 }
-.card-group[data-status="after"]{
+.card-group[data-status="after"] {
   transform: translateX(80%) scale(0) rotate(20deg);
 }
-.card-group[data-status="becoming-active-from-before"]{
+.card-group[data-status="becoming-active-from-before"] {
   transform: translateX(-80%) scale(0) rotate(-20deg);
   transition: none;
 }
-.card-group[data-status="before"]{
+.card-group[data-status="before"] {
   transform: translateX(-80%) scale(0) rotate(-20deg);
 }
-.card-group[data-status="becoming-active-from-after"]{
+.card-group[data-status="becoming-active-from-after"] {
   transform: translateX(80%) scale(0) rotate(20deg);
   transition: none;
 }
-.little-cards:nth-child(1){
+.little-cards:nth-child(1) {
   background-image: url(card_images/cat-glasses-space-abstract-wallpaper-preview.jpg);
   background-position: center;
   background-size: cover;
 }
-.little-cards:nth-child(3){
+.little-cards:nth-child(3) {
   background-image: url(card_images/download.jfif);
   background-position: center;
   background-size: cover;
 }
-.little-cards:nth-child(5){
+.little-cards:nth-child(5) {
   background-image: url(card_images/pexels-photo-617278.jpeg);
   background-position: center;
   background-size: cover;
 }
-.little-cards:nth-child(7){
+.little-cards:nth-child(7) {
   background-image: url(card_images/unnamed.png);
   background-position: center;
   background-size: cover;
 }
-.big-card:nth-child(2){
+.big-card:nth-child(2) {
   background-image: url(card_images/255883.webp);
   background-position: center;
   background-size: cover;
   transform: translateX(-10%) rotate(-2deg);
 }
-.big-card:nth-child(4){
+.big-card:nth-child(4) {
   background-image: url(card_images/5636721.webp);
   background-position: center;
   background-size: cover;
   transform: rotate(4deg);
 }
-.big-card:nth-child(6){
+.big-card:nth-child(6) {
   background-image: url(card_images/car-neon-chevrolet-corvette-race-cars-hd-wallpaper-preview.jpg);
   background-position: center;
   background-size: cover;
   transform: translateX(-6%) rotate(-4deg);
 }
-.big-card:nth-child(8){
+.big-card:nth-child(8) {
   background-image: url(card_images/cat-4k-hd-wallpaper-preview.jpg);
   background-position: center;
   background-size: cover;
   transform: translateX(10%) rotate(6deg);
 }
 
-.card-group[data-index="1"] > .big-card:nth-child(6){
+.card-group[data-index="1"] > .big-card:nth-child(6) {
   background-image: url(card_images/car-neon-chevrolet-corvette-race-cars-hd-wallpaper-preview.jpg);
 }
-.card-group[data-index="1"] > .big-card:nth-child(8){
+.card-group[data-index="1"] > .big-card:nth-child(8) {
   background-image: url(card_images/unnamed.png);
 }
 
-       /* big-card hover animation */
-.card-group:hover > .big-card:nth-child(2){
+/* big-card hover animation */
+.card-group:hover > .big-card:nth-child(2) {
   transform: translate(-70%, 12%) rotate(-20deg);
 }
-.card-group:hover > .big-card:nth-child(4){
+.card-group:hover > .big-card:nth-child(4) {
   transform: translate(-40%, 6%) rotate(-7deg);
 }
-.card-group:hover > .big-card:nth-child(6){
+.card-group:hover > .big-card:nth-child(6) {
   transform: translate(10%, 4%) rotate(7deg);
 }
-.card-group:hover > .big-card:nth-child(8){
+.card-group:hover > .big-card:nth-child(8) {
   transform: translate(70%, 14%) rotate(17deg);
 }
-       /* little-card hover animation */
-.card-group:hover > .little-cards:nth-child(1){
+/* little-card hover animation */
+.card-group:hover > .little-cards:nth-child(1) {
   transform: translate(260%, -160%) rotate(16deg);
 }
-.card-group:hover > .little-cards:nth-child(3){
+.card-group:hover > .little-cards:nth-child(3) {
   transform: translate(260%, 160%) rotate(-16deg);
 }
-.card-group:hover > .little-cards:nth-child(5){
+.card-group:hover > .little-cards:nth-child(5) {
   transform: translate(-300%, -150%) rotate(-18deg);
 }
-.card-group:hover > .little-cards:nth-child(7){
+.card-group:hover > .little-cards:nth-child(7) {
   transform: translate(-350%, 160%) rotate(12deg);
 }
-      /* buttons */
-.card-swiper-buttons{
+/* buttons */
+.card-swiper-buttons {
   margin-top: 8vmin;
   display: flex;
   justify-content: space-around;
   /* padding: 0vmin 1vmin; */
 }
-.card-swiper-buttons button{
+.card-swiper-buttons button {
   padding: 20px;
   text-align: center;
   font-size: 30px;
@@ -295,22 +294,22 @@
 /* end card games */
 
 /* carmel img hover animation */
-.carmel-body{
+.carmel-body {
   height: 100vh;
   width: 100%;
   background: #092431;
   overflow: hidden;
   position: relative;
 }
-#img-track{
+#img-track {
   display: flex;
   gap: 12px;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate( 0%, -50%);
+  transform: translate(0%, -50%);
 }
-#img-track .image{
+#img-track .image {
   height: 360px;
   width: 220px;
   object-fit: cover;
@@ -319,9 +318,73 @@
 /* end carmel img hover animation */
 
 /* up-box */
-.up-box-body{
-  height: 100vh;
-  width: 100%;
+.up-box-body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: black;
+  overflow: hidden;
 }
+.up-box-body .container {
+  position: relative;
+  width: 100%;
+  transform: rotate(-40deg);
+}
+.up-box-body .container .box{
+  position: relative;
+  left: -200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% + 400px);
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+  animation: animateSurface 1.5s ease-in-out infinite;
+}
+
+@keyframes animateSurface{
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(-50px);
+  }
+}
+
+.up-box-body .container .box .cube{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: aqua;
+  box-shadow:  0 0 5px rgba(3, 233, 244, 1),
+  0 0 25px rgba(3, 233, 244, 1),
+  0 0 50px rgba(3, 233, 244, 1)
+  ,0 0 100px rgba(3, 233, 244, 1),
+  0 0 200px rgba(3, 233, 244, 0.5),
+  0 0 300px rgba(3, 233, 244, 0.5);
+  transform-origin: bottom right;
+  animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+  }
+  60%{
+    transform: rotate(90deg);
+  }
+  65%{
+    transform: rotate(85deg);
+  }
+  70%{
+    transform: rotate(90deg);
+  }
+  75%{
+    transform: rotate(87.5deg);
+  }
+  80%, 100%{
+    transform: rotate(90deg);
+  }
+}
+
 /* end up-box */
