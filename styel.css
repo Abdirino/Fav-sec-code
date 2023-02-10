@@ -434,3 +434,25 @@
   z-index: 2;
 }
 /* end image masking */
+
+/* kpr section */
+.kpr{
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  background: rgb(87, 86, 86);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  flex-direction: column;
+}
+.kpr .h1{
+  padding: 5px;
+  font-size: 50px;
+  color: #15ccf9;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+}
+/* end kpr section */
